@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+    <!--Splash-->
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.wallpaper.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash" >
+
+    </fragment>
+
+
+    <!-- home -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wallpaper.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <action
+        android:id="@+id/action_to_homeFragment"
+        app:destination="@id/homeFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+
+
+    <!-- categories -->
+    <fragment
+        android:id="@+id/categoriesFragment"
+        android:name="com.example.wallpaper.ui.categories.CategoriesFragment"
+        android:label="fragment_categories"
+        tools:layout="@layout/fragment_categories" >
+        <argument
+            android:name="topic_id"
+            app:argType="string" />
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+    <action
+        android:id="@+id/action_to_categoriesFragment"
+        app:destination="@id/categoriesFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    <!-- search -->
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.wallpaper.ui.search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+
+        <argument
+            android:name="query"
+            app:argType="string" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_to_searchFragment"
+        app:destination="@id/searchFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+
+
+    <!-- detail -->
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.wallpaper.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_detailInfoFragment"
+            app:destination="@id/detailInfoFragment" />
+
+    </fragment>
+    <action
+        android:id="@+id/action_to_detailFragment"
+        app:destination="@id/detailFragment"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim"
+        app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+        app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    <!--  detail info   -->
+    <dialog
+        android:id="@+id/detailInfoFragment"
+        android:name="com.example.wallpaper.ui.detail_info.DetailInfoFragment"
+        android:label="fragment_detail_info"
+        tools:layout="@layout/fragment_detail_info" >
+        <argument
+            android:name="data"
+            app:argType="com.example.wallpaper.data.model.detail.ResponseDetail" />
+    </dialog>
+
+
+</navigation>

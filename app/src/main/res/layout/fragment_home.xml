@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.home.HomeFragment">
+    <!--Search-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/searchInpLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_15mdp"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:background="@drawable/bg_rounded_white"
+        android:padding="@dimen/_5mdp"
+        app:endIconDrawable="@drawable/magnifying_glass"
+        app:endIconMode="custom"
+        app:endIconTint="@color/gainsBoro"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/findWallpaper"
+            android:singleLine="true"
+            android:textColorHint="@color/gainsBoro" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Newest title-->
+    <TextView
+        android:id="@+id/newestTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:text="@string/newestWallpapers"
+        android:textColor="@color/darkStrategy"
+        android:textSize="@dimen/_14font_mdp"
+        app:fontPath="fonts/nunito_bold.ttf"
+        app:layout_constraintStart_toStartOf="@id/searchInpLay"
+        app:layout_constraintTop_toBottomOf="@id/searchInpLay" />
+    <!--Newest list-->
+    <com.todkars.shimmer.ShimmerRecyclerView
+        android:id="@+id/newestList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:clipToPadding="false"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_10mdp"
+        android:paddingEnd="@dimen/_15mdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newestTitle"
+        app:shimmer_recycler_auto_start="true"
+        app:shimmer_recycler_item_count="1"
+        app:shimmer_recycler_layout="@layout/item_images_shimmer"
+        app:shimmer_recycler_shape="linear"
+        tools:listitem="@layout/item_images" />
+    <!--Color tone title-->
+    <TextView
+        android:id="@+id/colorToneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:text="@string/colorTone"
+        android:textColor="@color/darkStrategy"
+        android:textSize="@dimen/_14font_mdp"
+        app:fontPath="fonts/nunito_bold.ttf"
+        app:layout_constraintStart_toStartOf="@id/searchInpLay"
+        app:layout_constraintTop_toBottomOf="@id/newestList" />
+    <!--Color tone list-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/colorToneList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:clipToPadding="false"
+        android:contentDescription="@string/app_name"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/_10mdp"
+        android:paddingEnd="@dimen/_15mdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/colorToneTitle"
+        tools:listitem="@layout/item_colors" />
+    <!--Categories title-->
+    <TextView
+        android:id="@+id/categoriesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:text="@string/categories"
+        android:textColor="@color/darkStrategy"
+        android:textSize="@dimen/_14font_mdp"
+        app:fontPath="fonts/nunito_bold.ttf"
+        app:layout_constraintStart_toStartOf="@id/searchInpLay"
+        app:layout_constraintTop_toBottomOf="@id/colorToneList" />
+    <!--Categories list-->
+    <com.todkars.shimmer.ShimmerRecyclerView
+        android:id="@+id/categoriesList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:paddingHorizontal="@dimen/_10mdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:listitem="@layout/item_categories"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoriesTitle"
+        app:shimmer_recycler_auto_start="true"
+        app:shimmer_recycler_item_count="2"
+        app:shimmer_recycler_layout="@layout/item_categories_shimmer"
+        app:shimmer_recycler_shape="linear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

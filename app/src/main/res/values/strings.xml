@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Wallpaper</string>
+
+    <string name="checkYourNetwork">Please check your network</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="version">Version</string>
+    <string name="findWallpaper">Find Wallpaper…</string>
+    <string name="newestWallpapers">Newest wallpapers</string>
+    <string name="colorTone">The color tone</string>
+    <string name="black">black</string>
+    <string name="white">white</string>
+    <string name="red">red</string>
+    <string name="green">green</string>
+    <string name="blue">blue</string>
+    <string name="yellow">yellow</string>
+    <string name="teal">teal</string>
+    <string name="purple">purple</string>
+    <string name="orange">orange</string>
+    <string name="categories">Categories</string>
+    <string name="notSupportRotateView">Your device dose not support Rotate View feature</string>
+    <string name="setWallpaper">Set wallpaper</string>
+    <string name="rotateView">Rotate view</string>
+    <string name="download">Download</string>
+    <string name="info">Info</string>
+    <string name="photos">Photos</string>
+    <string name="tryAgain">Try again!</string>
+    <string name="notFound">Not found any photo!</string>
+    <string name="searchCanNotBeEmpty">Search can not be empty!</string>
+</resources>

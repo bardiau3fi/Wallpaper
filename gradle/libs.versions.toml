@@ -1,0 +1,76 @@
+[versions]
+agp = "8.3.2"
+calligraphy3 = "3.1.1"
+coil = "2.5.0"
+dynamicsizes = "1.0"
+dynamicsizesVersion = "1.0"
+gson = "2.10.1"
+hiltAndroid = "2.48"
+kenburnsview = "1.0.7"
+kotlin = "1.9.0"
+coreKtx = "1.13.0"
+junit = "4.13.2"
+junitVersion = "1.1.5"
+espressoCore = "3.5.1"
+appcompat = "1.6.1"
+kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxCoroutinesCore = "1.7.2"
+lifecycleExtensions = "2.2.0"
+lifecycleRuntimeKtx = "2.7.0"
+loggingInterceptor = "4.9.3"
+material = "1.11.0"
+activity = "1.8.0"
+constraintlayout = "2.1.4"
+navigationFragmentKtx = "2.7.7"
+okhttp = "4.12.0"
+pagingRuntime = "3.2.1"
+permissionsflow = "1.2.6"
+permissionsflowVersion = "1.2.6"
+retrofitVersion = "2.9.0"
+rotateview = "1.0.0"
+rotateviewVersion = "1.0.0"
+shimmer = "0.5.0"
+shimmerRecyclerview = "0.4.1"
+viewpump = "2.0.3"
+safeargs="2.7.7"
+hilt="2.48"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationFragmentKtx" }
+androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "pagingRuntime" }
+calligraphy3 = { module = "io.github.inflationx:calligraphy3", version.ref = "calligraphy3" }
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofitVersion" }
+dynamicSizes = { module = "com.github.MrNouri:DynamicSizes", version.ref = "dynamicsizesVersion" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kenburnsview = { module = "com.flaviofaria:kenburnsview", version.ref = "kenburnsview" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
+permissionsFlow = { module = "com.robertlevonyan.components:PermissionsFlow", version.ref = "permissionsflowVersion" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofitVersion" }
+rotateView = { module = "com.github.MrNouri:RotateView", version.ref = "rotateviewVersion" }
+shimmer = { module = "com.facebook.shimmer:shimmer", version.ref = "shimmer" }
+shimmer-recyclerview = { module = "com.todkars:shimmer-recyclerview", version.ref = "shimmerRecyclerview" }
+viewpump = { module = "io.github.inflationx:viewpump", version.ref = "viewpump" }
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+navigationsafeargs={id="androidx.navigation.safeargs",version.ref="safeargs"}
+daggerhiltandroid={id="com.google.dagger.hilt.android" ,version.ref="hilt"}

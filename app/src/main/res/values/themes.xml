@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Wallpaper" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+
+
+    <style name="Theme.Wallpaper" parent="Base.Theme.Wallpaper">
+        <item name="android:windowBackground">@drawable/bg_gradient</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+    <!--ProgressBar-->
+    <style name="LightProgress">
+        <item name="colorAccent">@color/azureWhite</item>
+    </style>
+
+    <style name="DarkProgressbar">
+        <item name="colorAccent">@color/darkStrategy</item>
+    </style>
+    <!--Rounded image-->
+    <style name="CircleImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

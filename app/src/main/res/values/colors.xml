@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="azureWhite">#d7eced</color>
+    <color name="azureWhiteAlpha">#80D7ECED</color>
+    <color name="glassWhite">#dde7f3</color>
+    <color name="darkStrategy">#26272b</color>
+    <color name="darkStrategyAlpha">#8026272B</color>
+    <color name="whiteSmoke">#eef4f4</color>
+    <color name="lightSmoke">#eff3f6</color>
+    <color name="gainsBoro">#BDBDBD</color>
+    <color name="snow">#DDD8D8</color>
+    <color name="red">#E91E63</color>
+    <color name="green">#4CAF50</color>
+    <color name="blue">#2196F3</color>
+    <color name="yellow">#FFEB3B</color>
+    <color name="teal">#00BCD4</color>
+    <color name="purple">#9C27B0</color>
+    <color name="orange">#FF5722</color>
+    <color name="graniteGray">#6C5F5B</color>
+</resources>

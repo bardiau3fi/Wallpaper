@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="@dimen/_30mdp"
+    tools:context=".ui.detail_info.DetailInfoFragment">
+    <!--Name-->
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_20mdp"
+        android:textColor="@color/darkStrategy"
+        android:textSize="@dimen/_14font_mdp"
+        app:fontPath="fonts/nunito_bold.ttf"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!--Description-->
+    <TextView
+        android:id="@+id/descriptionTxt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:textColor="@color/darkStrategy"
+        android:textSize="@dimen/_10font_mdp"
+        app:layout_constraintEnd_toEndOf="@id/titleTxt"
+        app:layout_constraintStart_toStartOf="@id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@id/titleTxt" />
+    <!--User-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/userLay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15mdp"
+        app:layout_constraintEnd_toEndOf="@+id/titleTxt"
+        app:layout_constraintStart_toStartOf="@id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTxt">
+        <!--Avatar-->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/userAvatarImg"
+            android:layout_width="@dimen/_45mdp"
+            android:layout_height="@dimen/_45mdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/CircleImageView" />
+        <!--Name-->
+        <TextView
+            android:id="@+id/userNameTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10mdp"
+            android:layout_marginTop="@dimen/_5mdp"
+            android:textColor="@color/darkStrategy"
+            android:textSize="@dimen/_12font_mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userAvatarImg"
+            app:layout_constraintTop_toTopOf="@id/userAvatarImg" />
+        <!--Count-->
+        <TextView
+            android:id="@+id/userPhotosCountTxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10mdp"
+            android:textColor="@color/darkStrategy"
+            android:textSize="@dimen/_10font_mdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userAvatarImg"
+            app:layout_constraintTop_toBottomOf="@id/userNameTxt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Like-->
+    <TextView
+        android:id="@+id/likesTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_30mdp"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:textColor="@color/graniteGray"
+        android:textSize="@dimen/_10font_mdp"
+        app:drawableStartCompat="@drawable/heart"
+        app:drawableTint="@color/graniteGray"
+        app:layout_constraintStart_toStartOf="@id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@id/userLay" />
+    <!--View-->
+    <TextView
+        android:id="@+id/viewsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:textColor="@color/graniteGray"
+        android:textSize="@dimen/_10font_mdp"
+        app:drawableStartCompat="@drawable/eye"
+        app:drawableTint="@color/graniteGray"
+        app:layout_constraintEnd_toEndOf="@id/titleTxt"
+        app:layout_constraintStart_toStartOf="@id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@id/userLay" />
+    <!--Download-->
+    <TextView
+        android:id="@+id/downloadsTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20mdp"
+        android:layout_marginEnd="@dimen/_30mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:textColor="@color/graniteGray"
+        android:textSize="@dimen/_10font_mdp"
+        app:drawableStartCompat="@drawable/download"
+        app:drawableTint="@color/graniteGray"
+        app:layout_constraintEnd_toEndOf="@id/titleTxt"
+        app:layout_constraintTop_toBottomOf="@id/userLay" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

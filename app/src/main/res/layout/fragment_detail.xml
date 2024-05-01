@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".ui.detail.Detail">
+    <!--Container-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Image-->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <ImageView
+                android:id="@+id/coverImg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop" />
+        </HorizontalScrollView>
+        <!--Menu-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20mdp"
+            android:layout_marginBottom="@dimen/_40mdp"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <!--Info-->
+            <ImageView
+                android:id="@+id/infoImg"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:background="@drawable/bg_circle_azure_alpha"
+                android:padding="@dimen/_12mdp"
+                android:src="@drawable/info"
+                app:layout_constraintEnd_toStartOf="@+id/downloadLay"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+            <!--Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:text="@string/info"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8font_mdp"
+                app:layout_constraintEnd_toEndOf="@id/infoImg"
+                app:layout_constraintStart_toStartOf="@id/infoImg"
+                app:layout_constraintTop_toBottomOf="@id/infoImg" />
+            <!--Download-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/downloadLay"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toStartOf="@+id/setWallpaperImg"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/infoImg"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--Image-->
+                <ImageView
+                    android:id="@+id/downloadImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40mdp"
+                    android:background="@drawable/bg_circle_azure_alpha"
+                    android:padding="@dimen/_12mdp"
+                    android:src="@drawable/arrow_down_to_line"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+                <!--Progress-->
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/downloadLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/mines3mdp"
+                    android:visibility="gone"
+                    app:indicatorColor="@color/white"
+                    app:indicatorSize="@dimen/_40mdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:trackColor="@android:color/transparent"
+                    app:trackCornerRadius="@dimen/_5mdp"
+                    app:trackThickness="@dimen/_2mdp" />
+                <!--Title-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:text="@string/download"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8font_mdp"
+                    app:layout_constraintEnd_toEndOf="@id/downloadImg"
+                    app:layout_constraintStart_toStartOf="@id/downloadImg"
+                    app:layout_constraintTop_toBottomOf="@id/downloadImg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--Set wallpaper-->
+            <ImageView
+                android:id="@+id/setWallpaperImg"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:background="@drawable/bg_circle_azure_alpha"
+                android:padding="@dimen/_12mdp"
+                android:src="@drawable/image"
+                app:layout_constraintEnd_toStartOf="@+id/rotateViewImg"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/downloadLay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+            <!--Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:text="@string/setWallpaper"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8font_mdp"
+                app:layout_constraintEnd_toEndOf="@id/setWallpaperImg"
+                app:layout_constraintStart_toStartOf="@id/setWallpaperImg"
+                app:layout_constraintTop_toBottomOf="@id/setWallpaperImg" />
+            <!--RotateView-->
+            <ImageView
+                android:id="@+id/rotateViewImg"
+                android:layout_width="@dimen/_40mdp"
+                android:layout_height="@dimen/_40mdp"
+                android:background="@drawable/bg_circle_azure_alpha"
+                android:padding="@dimen/_12mdp"
+                android:src="@drawable/street_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/setWallpaperImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+            <!--Title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5mdp"
+                android:text="@string/rotateView"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_8font_mdp"
+                app:layout_constraintEnd_toEndOf="@id/rotateViewImg"
+                app:layout_constraintStart_toStartOf="@id/rotateViewImg"
+                app:layout_constraintTop_toBottomOf="@id/rotateViewImg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!--Loading-->
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_20mdp"
+        android:layout_height="@dimen/_20mdp"
+        android:theme="@style/DarkProgressbar"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
